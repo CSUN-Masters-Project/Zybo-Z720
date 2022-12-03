@@ -1,0 +1,16 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Debugger_ECE520_application_project_BPM-GDB,org.eclipse.launchbar.core.descriptorType.default\:Debugger_ECE520_application_project_BPM-Default,org.eclipse.launchbar.core.descriptorType.default\:Debugger_application_project_BPM_DDR-GDB,org.eclipse.launchbar.core.descriptorType.default\:Debugger_application_project_BPM_DDR-Emulation,org.eclipse.launchbar.core.descriptorType.default\:Debugger_application_project_timer_func-Default,org.eclipse.launchbar.core.descriptorType.default\:Debugger_application_project_write_to_file-Default,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_ECE520_application_project_BPM_system,org.eclipse.launchbar.core.descriptorType.default\:Debugger_application_project_BPM_DDR-Default,org.eclipse.launchbar.core.descriptorType.default\:Debugger_application_project_BPM_DDR_cont-Default
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_ECE520_application_project_BPM-Default/activeLaunchMode=embrun
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_ECE520_application_project_BPM-Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_ECE520_application_project_BPM-GDB/activeLaunchMode=embrun
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_ECE520_application_project_BPM-GDB/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_application_project_BPM_DDR-Default/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_application_project_BPM_DDR_cont-Default/activeLaunchMode=embrun
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_application_project_bram-Default/activeLaunchMode=embrun
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_application_project_bram-GDB/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_application_project_timer_func-Default/activeLaunchMode=embdebug
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_application_project_write_to_file-Default/activeLaunchMode=embrun
+org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_ECE520_application_project_BPM_system/activeLaunchMode=debug

@@ -1,0 +1,264 @@
+!SESSION 2022-12-02 01:08:48.969 -----------------------------------------------
+eclipse.buildId=2021.2
+java.version=11.0.11
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+This is a continuation of log file C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\BPM\.metadata\.bak_0.log
+Created Time: 2022-12-02 01:09:41.766
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:41.766
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/BPM_DDR_cont_wrapper/export/BPM_DDR_cont_wrapper/hw/BPM_DDR_wrapper.xsa ps7_cortexa9_1 C_CPU_CLK_FREQ_HZ], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:41.797
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/BPM_DDR_cont_wrapper/export/BPM_DDR_cont_wrapper/hw/BPM_DDR_wrapper.xsa ps7_cortexa9_1 C_CPU_CLK_FREQ_HZ], Result: [null, 666666687]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:41.797
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/BPM_DDR_cont_wrapper/export/BPM_DDR_cont_wrapper/hw/BPM_DDR_wrapper.xsa ps7_cortexa9_0], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:41.797
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/BPM_DDR_cont_wrapper/export/BPM_DDR_cont_wrapper/hw/BPM_DDR_wrapper.xsa ps7_cortexa9_0], Result: [null, PmodAD2_0 ps7_afi_0 ps7_afi_1 ps7_afi_2 ps7_afi_3 ps7_coresight_comp_0 ps7_ddr_0 ps7_ddrc_0 ps7_dev_cfg_0 ps7_dma_ns ps7_dma_s ps7_globaltimer_0 ps7_gpio_0 ps7_gpv_0 ps7_intc_dist_0 ps7_iop_bus_config_0 ps7_l2cachec_0 ps7_ocmc_0 ps7_pl310_0 ps7_pmu_0 ps7_qspi_0 ps7_qspi_linear_0 ps7_ram_0 ps7_ram_1 ps7_scuc_0 ps7_scugic_0 ps7_scutimer_0 ps7_scuwdt_0 ps7_slcr_0 ps7_uart_1 ps7_xadc_0]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:41.797
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_files_on_hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/BPM_DDR_cont_wrapper/export/BPM_DDR_cont_wrapper/hw/BPM_DDR_wrapper.xsa bit], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:41.797
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_files_on_hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/BPM_DDR_cont_wrapper/export/BPM_DDR_cont_wrapper/hw/BPM_DDR_wrapper.xsa bit], Result: [null, BPM_DDR_wrapper.bit]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:41.797
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:44.692
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:44.698
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:44.944
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo Z7 210351B481C2A]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:44.944
+!MESSAGE XSCT Command: [version -server], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.500
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2021.2]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.500
+!MESSAGE XSCT Command: [version], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.500
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2021.2.0
+SW Build 1967 on 2021-10-14-04:42:58
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.513
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.513
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo Z7 210351B481C2A]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.513
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==1}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.524
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.540
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.540
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo Z7 210351B481C2A]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.540
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==1}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.556
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.556
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.571
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo Z7 210351B481C2A]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.571
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==1}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.587
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.587
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.587
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo Z7 210351B481C2A]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.587
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==1}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.603
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.603
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.619
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo Z7 210351B481C2A]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.619
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==1}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.634
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.634
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.634
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo Z7 210351B481C2A]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.634
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==1}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.650
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.650
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zybo Z7 210351B481C2A" && level == 0}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.681
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zybo Z7 210351B481C2A" && level == 0}], Result: [null, ]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:45.681
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:46.138
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:46.138
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:46.169
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:46.169
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:46.248
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:46.248
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:49.263
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:49.295
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:49.302
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B481C2A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:49.302
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:49.318
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:49.334
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:49.509
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:49.509
+!MESSAGE XSCT Command: [fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/application_project_BPM_DDR_cont/_ide/bitstream/BPM_DDR_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:51.848
+!MESSAGE XSCT command with result: [fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/application_project_BPM_DDR_cont/_ide/bitstream/BPM_DDR_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:51.879
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:52.513
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:52.513
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/BPM_DDR_cont_wrapper/export/BPM_DDR_cont_wrapper/hw/BPM_DDR_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:52.541
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/BPM_DDR_cont_wrapper/export/BPM_DDR_cont_wrapper/hw/BPM_DDR_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, BPM_DDR_wrapper]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:52.541
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:53.139
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:53.139
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:53.170
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:53.170
+!MESSAGE XSCT Command: [source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/application_project_BPM_DDR_cont/_ide/psinit/ps7_init.tcl], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:53.186
+!MESSAGE XSCT command with result: [source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/application_project_BPM_DDR_cont/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:53.186
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:56.450
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:56.450
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:56.450
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:56.450
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:57.064
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:57.064
+!MESSAGE XSCT Command: [dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/application_project_BPM_DDR_cont/Debug/application_project_BPM_DDR_cont.elf], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:58.480
+!MESSAGE XSCT command with result: [dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/application_project_BPM_DDR_cont/Debug/application_project_BPM_DDR_cont.elf], Result: [null, ]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:58.480
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:59.124
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:59.777
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:59.777
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:09:59.793
+!MESSAGE XSCT Command: [con], Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:10:00.399
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-5: Launching Debugger_application_project_BPM_DDR_cont-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:31:17.810
+!MESSAGE XSCT Command: [disconnect tcfchan#1], Thread: Thread-1042
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-12-02 01:31:17.813
+!MESSAGE XSCT command with result: [disconnect tcfchan#1], Result: [null, ]. Thread: Thread-1042

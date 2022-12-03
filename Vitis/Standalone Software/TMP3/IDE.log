@@ -1,0 +1,157 @@
+15:32:06 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\TMP3\temp_xsdb_launch_script.tcl
+15:32:09 INFO  : XSCT server has started successfully.
+15:32:09 INFO  : Successfully done setting XSCT server connection channel  
+15:32:09 INFO  : plnx-install-location is set to ''
+15:32:09 INFO  : Successfully done setting workspace for the tool. 
+15:32:29 INFO  : Registering command handlers for Vitis TCF services
+15:32:29 INFO  : Platform repository initialization has completed.
+15:32:29 INFO  : Successfully done query RDI_DATADIR 
+15:37:41 INFO  : Result from executing command 'getProjects': TMP3_wrapper
+15:37:41 INFO  : Result from executing command 'getPlatforms': 
+15:37:41 WARN  : An unexpected exception occurred in the module 'platform project logging'
+15:37:41 INFO  : Platform 'TMP3_wrapper' is added to custom repositories.
+15:37:53 INFO  : Platform 'TMP3_wrapper' is added to custom repositories.
+15:40:05 INFO  : Result from executing command 'getProjects': TMP3_wrapper
+15:40:05 INFO  : Result from executing command 'getPlatforms': TMP3_wrapper|C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/TMP3_wrapper/export/TMP3_wrapper/TMP3_wrapper.xpfm
+15:40:05 INFO  : Checking for BSP changes to sync application flags for project 'application_project_tmp3'...
+19:00:08 INFO  : Checking for BSP changes to sync application flags for project 'application_project_tmp3'...
+10:03:48 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\TMP3\temp_xsdb_launch_script.tcl
+10:03:52 INFO  : XSCT server has started successfully.
+10:03:52 INFO  : plnx-install-location is set to ''
+10:03:52 INFO  : Platform repository initialization has completed.
+10:03:52 INFO  : Successfully done setting XSCT server connection channel  
+10:03:52 INFO  : Registering command handlers for Vitis TCF services
+10:03:56 INFO  : Successfully done setting workspace for the tool. 
+10:03:56 INFO  : Successfully done query RDI_DATADIR 
+14:48:34 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\TMP3\temp_xsdb_launch_script.tcl
+14:48:42 INFO  : XSCT server has started successfully.
+14:48:42 INFO  : plnx-install-location is set to ''
+14:48:42 INFO  : Successfully done setting XSCT server connection channel  
+14:48:42 INFO  : Successfully done setting workspace for the tool. 
+14:48:43 INFO  : Registering command handlers for Vitis TCF services
+14:48:43 INFO  : Platform repository initialization has completed.
+14:48:44 INFO  : Successfully done query RDI_DATADIR 
+14:52:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:52:34 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+14:52:34 INFO  : 'jtag frequency' command is executed.
+14:52:34 INFO  : Context for 'APU' is selected.
+14:52:34 INFO  : System reset is completed.
+14:52:37 INFO  : 'after 3000' command is executed.
+14:52:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+14:52:40 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/application_project_tmp3/_ide/bitstream/TMP3_wrapper.bit"
+14:52:40 INFO  : Context for 'APU' is selected.
+14:52:40 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/TMP3_wrapper/export/TMP3_wrapper/hw/TMP3_wrapper.xsa'.
+14:52:40 INFO  : 'configparams force-mem-access 1' command is executed.
+14:52:40 INFO  : Context for 'APU' is selected.
+14:52:40 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/application_project_tmp3/_ide/psinit/ps7_init.tcl' is done.
+14:52:41 INFO  : 'ps7_init' command is executed.
+14:52:41 INFO  : 'ps7_post_config' command is executed.
+14:52:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:52:41 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/application_project_tmp3/Debug/application_project_tmp3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:52:41 INFO  : 'configparams force-mem-access 0' command is executed.
+14:52:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/application_project_tmp3/_ide/bitstream/TMP3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/TMP3_wrapper/export/TMP3_wrapper/hw/TMP3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/application_project_tmp3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/application_project_tmp3/Debug/application_project_tmp3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:52:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:52:41 INFO  : 'con' command is executed.
+14:52:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:52:41 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\TMP3\application_project_tmp3_system\_ide\scripts\debugger_application_project_tmp3-default.tcl'
+14:54:57 INFO  : Disconnected from the channel tcfchan#1.
+14:54:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:54:58 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+14:54:58 INFO  : 'jtag frequency' command is executed.
+14:55:00 INFO  : Context for 'APU' is selected.
+14:55:00 INFO  : System reset is completed.
+14:55:03 INFO  : 'after 3000' command is executed.
+14:55:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+14:55:05 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/application_project_tmp3/_ide/bitstream/TMP3_wrapper.bit"
+14:55:05 INFO  : Context for 'APU' is selected.
+14:55:08 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/TMP3_wrapper/export/TMP3_wrapper/hw/TMP3_wrapper.xsa'.
+14:55:08 INFO  : 'configparams force-mem-access 1' command is executed.
+14:55:08 INFO  : Context for 'APU' is selected.
+14:55:08 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/application_project_tmp3/_ide/psinit/ps7_init.tcl' is done.
+14:55:08 INFO  : 'ps7_init' command is executed.
+14:55:08 INFO  : 'ps7_post_config' command is executed.
+14:55:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:55:09 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/application_project_tmp3/Debug/application_project_tmp3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:55:09 INFO  : 'configparams force-mem-access 0' command is executed.
+14:55:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/application_project_tmp3/_ide/bitstream/TMP3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/TMP3_wrapper/export/TMP3_wrapper/hw/TMP3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/application_project_tmp3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/application_project_tmp3/Debug/application_project_tmp3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:55:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:55:09 INFO  : 'con' command is executed.
+14:55:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:55:09 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\TMP3\application_project_tmp3_system\_ide\scripts\debugger_application_project_tmp3-default.tcl'
+16:32:41 INFO  : Disconnected from the channel tcfchan#2.
+00:53:42 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\TMP3\temp_xsdb_launch_script.tcl
+00:53:47 INFO  : XSCT server has started successfully.
+00:53:47 INFO  : plnx-install-location is set to ''
+00:53:47 INFO  : Successfully done setting XSCT server connection channel  
+00:53:47 INFO  : Successfully done setting workspace for the tool. 
+00:54:08 INFO  : Registering command handlers for Vitis TCF services
+00:54:08 INFO  : Platform repository initialization has completed.
+00:54:09 INFO  : Successfully done query RDI_DATADIR 
+22:34:45 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\TMP3\temp_xsdb_launch_script.tcl
+22:34:48 INFO  : XSCT server has started successfully.
+22:34:48 INFO  : Successfully done setting XSCT server connection channel  
+22:34:48 INFO  : plnx-install-location is set to ''
+22:34:48 INFO  : Successfully done setting workspace for the tool. 
+22:35:10 INFO  : Registering command handlers for Vitis TCF services
+22:35:10 INFO  : Successfully done query RDI_DATADIR 
+22:35:10 INFO  : Platform repository initialization has completed.
+19:22:41 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\TMP3\temp_xsdb_launch_script.tcl
+19:22:44 INFO  : XSCT server has started successfully.
+19:22:44 INFO  : Successfully done setting XSCT server connection channel  
+19:22:44 INFO  : plnx-install-location is set to ''
+19:22:44 INFO  : Successfully done setting workspace for the tool. 
+19:22:45 INFO  : Registering command handlers for Vitis TCF services
+19:22:45 INFO  : Platform repository initialization has completed.
+19:22:45 INFO  : Successfully done query RDI_DATADIR 
+11:57:18 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\TMP3\temp_xsdb_launch_script.tcl
+11:57:24 INFO  : XSCT server has started successfully.
+11:57:24 INFO  : plnx-install-location is set to ''
+11:57:24 INFO  : Successfully done setting XSCT server connection channel  
+11:57:24 INFO  : Successfully done setting workspace for the tool. 
+11:57:44 INFO  : Registering command handlers for Vitis TCF services
+11:57:44 INFO  : Platform repository initialization has completed.
+11:57:45 INFO  : Successfully done query RDI_DATADIR 

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;application_project_BPM_DDR_cont/src/helloworld.c&apos; to &apos;BPM_DDR_cont.c&apos;" description="Rename resource &apos;helloworld.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/helloworld.c" name="BPM_DDR_cont.c" stamp="1659658934853" updateReferences="true"/>
+</session>

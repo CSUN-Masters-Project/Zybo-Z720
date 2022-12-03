@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ECE520_application_project_BPM/src/BPM.c&apos; to &apos;BPM_BRAM.c&apos;" description="Rename resource &apos;BPM.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/BPM.c" name="BPM_BRAM.c" stamp="1658099963327" updateReferences="true"/>
+</session>

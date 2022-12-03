@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sun Jun  5 10:10:13 2022
+# Process ID: 25620
+# Current directory: C:/Users/luisr/.Xilinx/VHDL_Projects/Graduate_Project/FPGA/Pmod_AD2/Pmod_AD2.runs/Pmod_AD2_auto_pc_0_synth_1
+# Command line: vivado.exe -log Pmod_AD2_auto_pc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Pmod_AD2_auto_pc_0.tcl
+# Log file: C:/Users/luisr/.Xilinx/VHDL_Projects/Graduate_Project/FPGA/Pmod_AD2/Pmod_AD2.runs/Pmod_AD2_auto_pc_0_synth_1/Pmod_AD2_auto_pc_0.vds
+# Journal file: C:/Users/luisr/.Xilinx/VHDL_Projects/Graduate_Project/FPGA/Pmod_AD2/Pmod_AD2.runs/Pmod_AD2_auto_pc_0_synth_1\vivado.jou
+# Running On: DESKTOP-AJV8A0J, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 16855 MB
+#-----------------------------------------------------------
+source Pmod_AD2_auto_pc_0.tcl -notrace

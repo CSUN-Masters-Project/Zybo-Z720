@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="application_project_tmp3" location="C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/application_project_tmp3" platform="C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/TMP3/TMP3_wrapper/export/TMP3_wrapper/TMP3_wrapper.xpfm" platformUID="xilinx:zybo-z7-20::0.0(custom)" systemProject="application_project_tmp3_system" sysConfig="TMP3_wrapper" runtime="cpp" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="3b8beb79737396ac31692265a2b1da6c">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1324837431">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1338619821" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

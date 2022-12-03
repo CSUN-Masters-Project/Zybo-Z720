@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="sdx.custom.platform.repository.locations" value="C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\BPM\BPM_wrapper\export\BPM_wrapper;C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\BPM\DDR_wrapper\export\DDR_wrapper;C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\BPM\DDR_write_to_file_wrapper\export\DDR_write_to_file_wrapper;C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\BPM\BPM_DDR_wrapper\export\BPM_DDR_wrapper;C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\BPM\BPM_DDR_cont_wrapper\export\BPM_DDR_cont_wrapper"/>
+</section>

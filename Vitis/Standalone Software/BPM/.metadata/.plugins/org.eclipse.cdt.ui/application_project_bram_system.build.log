@@ -1,0 +1,10 @@
+15:14:59 **** Incremental Build of configuration Debug for project application_project_bram_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 60753 C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/BPM_wrapper_1/export/BPM_wrapper_1/BPM_wrapper_1.xpfm standalone_ps7_cortexa9_0 C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/application_project_bram_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/BPM_wrapper_1/export/BPM_wrapper_1/BPM_wrapper_1.xpfm --sys_config BPM_wrapper_1 --bif C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/application_project_bram_system/Debug/system.bif --bitstream C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/application_project_bram/_ide/bitstream/BPM_wrapper.bit --elf C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/application_project_bram/Debug/application_project_bram.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/application_project_bram/_ide/bitstream/BPM_wrapper.bit
+Running C:/Xilinx/Vitis/2021.2/bin/bootgen  -image C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/application_project_bram_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+15:15:05 Build Finished (took 5s.873ms)
+

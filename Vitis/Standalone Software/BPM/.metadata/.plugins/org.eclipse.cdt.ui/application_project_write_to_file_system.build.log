@@ -1,0 +1,10 @@
+17:40:12 **** Build of configuration Debug for project application_project_write_to_file_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 65451 C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/DDR_write_to_file_wrapper/export/DDR_write_to_file_wrapper/DDR_write_to_file_wrapper.xpfm standalone_ps7_cortexa9_0 C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/application_project_write_to_file_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/DDR_write_to_file_wrapper/export/DDR_write_to_file_wrapper/DDR_write_to_file_wrapper.xpfm --sys_config DDR_write_to_file_wrapper --bif C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/application_project_write_to_file_system/Debug/system.bif --bitstream C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/application_project_write_to_file/_ide/bitstream/DDR_wrapper.bit --elf C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/application_project_write_to_file/Debug/application_project_write_to_file.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/application_project_write_to_file/_ide/bitstream/DDR_wrapper.bit
+Running C:/Xilinx/Vitis/2021.2/bin/bootgen  -image C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/application_project_write_to_file_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+17:40:17 Build Finished (took 5s.419ms)
+

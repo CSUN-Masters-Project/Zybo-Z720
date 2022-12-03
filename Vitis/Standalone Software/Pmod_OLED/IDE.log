@@ -1,0 +1,2699 @@
+19:31:49 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\temp_xsdb_launch_script.tcl
+19:31:52 INFO  : Registering command handlers for Vitis TCF services
+19:31:52 INFO  : Platform repository initialization has completed.
+19:31:55 INFO  : XSCT server has started successfully.
+19:31:55 INFO  : plnx-install-location is set to ''
+19:31:55 INFO  : Successfully done setting XSCT server connection channel  
+19:31:55 INFO  : Successfully done query RDI_DATADIR 
+19:31:55 INFO  : Successfully done setting workspace for the tool. 
+19:32:52 INFO  : Result from executing command 'getProjects': Pmod_OLED_wrapper
+19:32:52 INFO  : Result from executing command 'getPlatforms': 
+19:32:52 WARN  : An unexpected exception occurred in the module 'platform project logging'
+19:32:52 INFO  : Platform 'Pmod_OLED_wrapper' is added to custom repositories.
+19:33:05 INFO  : Platform 'Pmod_OLED_wrapper' is added to custom repositories.
+19:33:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:33:26 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+19:33:26 INFO  : 'jtag frequency' command is executed.
+19:33:26 INFO  : Context for 'APU' is selected.
+19:33:26 INFO  : System reset is completed.
+19:33:29 INFO  : 'after 3000' command is executed.
+19:33:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+19:33:32 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+19:33:32 INFO  : Context for 'APU' is selected.
+19:33:32 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+19:33:32 INFO  : 'configparams force-mem-access 1' command is executed.
+19:33:32 INFO  : Context for 'APU' is selected.
+19:33:32 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+19:33:33 INFO  : 'ps7_init' command is executed.
+19:33:33 INFO  : 'ps7_post_config' command is executed.
+19:33:33 INFO  : 'configparams force-mem-access 0' command is executed.
+19:33:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:33:33 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+19:33:43 INFO  : Disconnected from the channel tcfchan#1.
+19:33:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:33:44 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+19:33:44 INFO  : 'jtag frequency' command is executed.
+19:33:44 INFO  : Context for 'APU' is selected.
+19:33:44 INFO  : System reset is completed.
+19:33:47 INFO  : 'after 3000' command is executed.
+19:33:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+19:33:49 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+19:33:49 INFO  : Context for 'APU' is selected.
+19:33:49 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+19:33:49 INFO  : 'configparams force-mem-access 1' command is executed.
+19:33:49 INFO  : Context for 'APU' is selected.
+19:33:49 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+19:33:50 INFO  : 'ps7_init' command is executed.
+19:33:50 INFO  : 'ps7_post_config' command is executed.
+19:33:50 INFO  : 'configparams force-mem-access 0' command is executed.
+19:33:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:33:50 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+19:34:27 INFO  : Result from executing command 'getProjects': Pmod_OLED_wrapper
+19:34:27 INFO  : Result from executing command 'getPlatforms': Pmod_OLED_wrapper|C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/Pmod_OLED_wrapper.xpfm
+19:34:27 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+19:34:48 INFO  : Disconnected from the channel tcfchan#2.
+19:34:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:34:52 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+19:34:52 INFO  : 'jtag frequency' command is executed.
+19:34:52 INFO  : Context for 'APU' is selected.
+19:34:52 INFO  : System reset is completed.
+19:34:55 INFO  : 'after 3000' command is executed.
+19:34:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+19:34:57 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+19:34:57 INFO  : Context for 'APU' is selected.
+19:34:57 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+19:34:57 INFO  : 'configparams force-mem-access 1' command is executed.
+19:34:57 INFO  : Context for 'APU' is selected.
+19:34:57 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+19:34:58 INFO  : 'ps7_init' command is executed.
+19:34:58 INFO  : 'ps7_post_config' command is executed.
+19:34:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:34:58 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:34:58 INFO  : 'configparams force-mem-access 0' command is executed.
+19:34:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:34:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:34:58 INFO  : 'con' command is executed.
+19:34:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:34:58 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+19:42:39 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+19:42:51 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+19:43:21 INFO  : Disconnected from the channel tcfchan#5.
+19:43:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:43:22 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+19:43:22 INFO  : 'jtag frequency' command is executed.
+19:43:24 INFO  : Context for 'APU' is selected.
+19:43:24 INFO  : System reset is completed.
+19:43:27 INFO  : 'after 3000' command is executed.
+19:43:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+19:43:29 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+19:43:29 INFO  : Context for 'APU' is selected.
+19:43:29 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+19:43:29 INFO  : 'configparams force-mem-access 1' command is executed.
+19:43:29 INFO  : Context for 'APU' is selected.
+19:43:29 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+19:43:30 INFO  : 'ps7_init' command is executed.
+19:43:30 INFO  : 'ps7_post_config' command is executed.
+19:43:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:43:30 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:43:30 INFO  : 'configparams force-mem-access 0' command is executed.
+19:43:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:43:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:43:30 INFO  : 'con' command is executed.
+19:43:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:43:30 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+19:44:27 INFO  : Disconnected from the channel tcfchan#8.
+13:45:13 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\temp_xsdb_launch_script.tcl
+13:45:17 INFO  : XSCT server has started successfully.
+13:45:17 INFO  : Successfully done setting XSCT server connection channel  
+13:45:17 INFO  : plnx-install-location is set to ''
+13:45:17 INFO  : Successfully done setting workspace for the tool. 
+13:45:39 INFO  : Registering command handlers for Vitis TCF services
+13:45:39 INFO  : Platform repository initialization has completed.
+13:45:43 INFO  : Successfully done query RDI_DATADIR 
+13:50:18 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+13:50:24 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+13:50:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:50:41 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+13:50:41 INFO  : 'jtag frequency' command is executed.
+13:50:41 INFO  : Context for 'APU' is selected.
+13:50:42 INFO  : System reset is completed.
+13:50:45 INFO  : 'after 3000' command is executed.
+13:50:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+13:50:47 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+13:50:47 INFO  : Context for 'APU' is selected.
+13:50:47 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+13:50:47 INFO  : 'configparams force-mem-access 1' command is executed.
+13:50:47 INFO  : Context for 'APU' is selected.
+13:50:47 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+13:50:48 INFO  : 'ps7_init' command is executed.
+13:50:48 INFO  : 'ps7_post_config' command is executed.
+13:50:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:50:48 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:50:49 INFO  : 'configparams force-mem-access 0' command is executed.
+13:50:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:50:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:50:49 INFO  : 'con' command is executed.
+13:50:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:50:49 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+15:41:39 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\temp_xsdb_launch_script.tcl
+15:44:40 ERROR : Timed out. 180 seconds have elapsed while waiting for XSCT server to launch.
+15:44:40 WARN  : xsct server communication channel is not established.
+20:02:50 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\temp_xsdb_launch_script.tcl
+20:02:53 INFO  : Registering command handlers for Vitis TCF services
+20:02:53 INFO  : Platform repository initialization has completed.
+20:02:54 INFO  : XSCT server has started successfully.
+20:02:58 INFO  : Successfully done setting XSCT server connection channel  
+20:02:58 INFO  : plnx-install-location is set to ''
+20:02:58 INFO  : Successfully done query RDI_DATADIR 
+20:02:58 INFO  : Successfully done setting workspace for the tool. 
+20:03:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:03:12 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+20:03:12 INFO  : 'jtag frequency' command is executed.
+20:03:12 INFO  : Context for 'APU' is selected.
+20:03:12 INFO  : System reset is completed.
+20:03:15 INFO  : 'after 3000' command is executed.
+20:03:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+20:03:18 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+20:03:18 INFO  : Context for 'APU' is selected.
+20:03:18 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+20:03:18 INFO  : 'configparams force-mem-access 1' command is executed.
+20:03:18 INFO  : Context for 'APU' is selected.
+20:03:18 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+20:03:19 INFO  : 'ps7_init' command is executed.
+20:03:19 INFO  : 'ps7_post_config' command is executed.
+20:03:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:03:19 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:03:20 INFO  : 'configparams force-mem-access 0' command is executed.
+20:03:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:03:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:03:20 INFO  : 'con' command is executed.
+20:03:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:03:20 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+20:06:33 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+20:06:38 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+20:07:12 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+20:07:15 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+20:07:30 INFO  : Disconnected from the channel tcfchan#1.
+20:07:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:07:31 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+20:07:31 INFO  : 'jtag frequency' command is executed.
+20:07:31 INFO  : Context for 'APU' is selected.
+20:07:31 INFO  : System reset is completed.
+20:07:34 INFO  : 'after 3000' command is executed.
+20:07:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+20:07:37 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+20:07:37 INFO  : Context for 'APU' is selected.
+20:07:40 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+20:07:40 INFO  : 'configparams force-mem-access 1' command is executed.
+20:07:40 INFO  : Context for 'APU' is selected.
+20:07:40 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+20:07:41 INFO  : 'ps7_init' command is executed.
+20:07:41 INFO  : 'ps7_post_config' command is executed.
+20:07:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:07:41 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:07:41 INFO  : 'configparams force-mem-access 0' command is executed.
+20:07:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:07:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:07:41 INFO  : 'con' command is executed.
+20:07:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:07:41 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+20:11:58 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+20:17:03 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+20:17:06 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+20:17:14 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+20:17:16 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+20:17:26 INFO  : Disconnected from the channel tcfchan#4.
+20:17:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:17:28 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+20:17:28 INFO  : 'jtag frequency' command is executed.
+20:17:28 INFO  : Context for 'APU' is selected.
+20:17:28 INFO  : System reset is completed.
+20:17:31 INFO  : 'after 3000' command is executed.
+20:17:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+20:17:33 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+20:17:33 INFO  : Context for 'APU' is selected.
+20:17:36 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+20:17:36 INFO  : 'configparams force-mem-access 1' command is executed.
+20:17:36 INFO  : Context for 'APU' is selected.
+20:17:36 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+20:17:37 INFO  : 'ps7_init' command is executed.
+20:17:37 INFO  : 'ps7_post_config' command is executed.
+20:17:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:17:37 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:17:37 INFO  : 'configparams force-mem-access 0' command is executed.
+20:17:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:17:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:17:37 INFO  : 'con' command is executed.
+20:17:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:17:37 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+20:18:14 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+20:18:16 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+20:18:30 INFO  : Disconnected from the channel tcfchan#7.
+20:18:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:18:31 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+20:18:31 INFO  : 'jtag frequency' command is executed.
+20:18:31 INFO  : Context for 'APU' is selected.
+20:18:31 INFO  : System reset is completed.
+20:18:34 INFO  : 'after 3000' command is executed.
+20:18:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+20:18:37 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+20:18:37 INFO  : Context for 'APU' is selected.
+20:18:39 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+20:18:39 INFO  : 'configparams force-mem-access 1' command is executed.
+20:18:39 INFO  : Context for 'APU' is selected.
+20:18:39 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+20:18:40 INFO  : 'ps7_init' command is executed.
+20:18:40 INFO  : 'ps7_post_config' command is executed.
+20:18:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:18:41 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:18:41 INFO  : 'configparams force-mem-access 0' command is executed.
+20:18:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:18:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:18:41 INFO  : 'con' command is executed.
+20:18:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:18:41 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+20:18:55 INFO  : Result from executing command 'removePlatformRepo': 
+20:19:37 INFO  : Result from executing command 'getProjects': Pmod_OLED_wrapper
+20:19:37 INFO  : Result from executing command 'getPlatforms': 
+20:19:37 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+20:19:51 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+20:20:13 INFO  : Disconnected from the channel tcfchan#9.
+20:20:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:20:14 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+20:20:14 INFO  : 'jtag frequency' command is executed.
+20:20:14 INFO  : Context for 'APU' is selected.
+20:20:14 INFO  : System reset is completed.
+20:20:17 INFO  : 'after 3000' command is executed.
+20:20:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+20:20:19 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+20:20:19 INFO  : Context for 'APU' is selected.
+20:20:23 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+20:20:23 INFO  : 'configparams force-mem-access 1' command is executed.
+20:20:23 INFO  : Context for 'APU' is selected.
+20:20:23 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+20:20:23 INFO  : 'ps7_init' command is executed.
+20:20:23 INFO  : 'ps7_post_config' command is executed.
+20:20:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:20:23 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:20:23 INFO  : 'configparams force-mem-access 0' command is executed.
+20:20:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:20:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:20:24 INFO  : 'con' command is executed.
+20:20:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:20:24 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+20:22:32 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+20:34:52 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+20:35:23 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+20:36:58 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+20:37:13 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+20:37:33 INFO  : Disconnected from the channel tcfchan#14.
+20:37:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:37:34 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+20:37:34 INFO  : 'jtag frequency' command is executed.
+20:37:36 INFO  : Context for 'APU' is selected.
+20:37:36 INFO  : System reset is completed.
+20:37:39 INFO  : 'after 3000' command is executed.
+20:37:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+20:37:42 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+20:37:42 INFO  : Context for 'APU' is selected.
+20:37:42 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+20:37:42 INFO  : 'configparams force-mem-access 1' command is executed.
+20:37:42 INFO  : Context for 'APU' is selected.
+20:37:42 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+20:37:43 INFO  : 'ps7_init' command is executed.
+20:37:43 INFO  : 'ps7_post_config' command is executed.
+20:37:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:37:43 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:37:43 INFO  : 'configparams force-mem-access 0' command is executed.
+20:37:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:37:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:37:43 INFO  : 'con' command is executed.
+20:37:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:37:43 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+20:38:18 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+20:38:34 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+20:38:50 INFO  : Disconnected from the channel tcfchan#18.
+20:38:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:38:51 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+20:38:51 INFO  : 'jtag frequency' command is executed.
+20:38:52 INFO  : Context for 'APU' is selected.
+20:38:52 INFO  : System reset is completed.
+20:38:55 INFO  : 'after 3000' command is executed.
+20:38:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+20:38:57 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+20:38:57 INFO  : Context for 'APU' is selected.
+20:38:57 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+20:38:57 INFO  : 'configparams force-mem-access 1' command is executed.
+20:38:57 INFO  : Context for 'APU' is selected.
+20:38:57 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+20:38:58 INFO  : 'ps7_init' command is executed.
+20:38:58 INFO  : 'ps7_post_config' command is executed.
+20:38:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:38:58 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:38:58 INFO  : 'configparams force-mem-access 0' command is executed.
+20:38:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:38:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:38:59 INFO  : 'con' command is executed.
+20:38:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:38:59 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+20:42:21 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+20:42:38 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+20:42:51 INFO  : Disconnected from the channel tcfchan#21.
+20:42:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:42:52 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+20:42:52 INFO  : 'jtag frequency' command is executed.
+20:42:54 INFO  : Context for 'APU' is selected.
+20:42:54 INFO  : System reset is completed.
+20:42:57 INFO  : 'after 3000' command is executed.
+20:42:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+20:43:00 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+20:43:00 INFO  : Context for 'APU' is selected.
+20:43:00 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+20:43:00 INFO  : 'configparams force-mem-access 1' command is executed.
+20:43:00 INFO  : Context for 'APU' is selected.
+20:43:00 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+20:43:01 INFO  : 'ps7_init' command is executed.
+20:43:01 INFO  : 'ps7_post_config' command is executed.
+20:43:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:43:01 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:43:01 INFO  : 'configparams force-mem-access 0' command is executed.
+20:43:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:43:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:43:01 INFO  : 'con' command is executed.
+20:43:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:43:01 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+20:46:00 INFO  : Disconnected from the channel tcfchan#24.
+00:26:18 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\temp_xsdb_launch_script.tcl
+00:26:23 INFO  : XSCT server has started successfully.
+00:26:23 INFO  : plnx-install-location is set to ''
+00:26:23 INFO  : Successfully done setting XSCT server connection channel  
+00:26:23 INFO  : Successfully done setting workspace for the tool. 
+00:26:35 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:26:35 ERROR : Failed to get platform details for the project 'Pmod_OLED'. Cannot sync application flags.
+00:26:43 INFO  : Platform repository initialization has completed.
+00:26:43 INFO  : Registering command handlers for Vitis TCF services
+00:26:47 INFO  : Successfully done query RDI_DATADIR 
+00:26:55 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:27:01 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:27:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:27:22 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+00:27:22 INFO  : 'jtag frequency' command is executed.
+00:27:22 INFO  : Context for 'APU' is selected.
+00:27:22 INFO  : System reset is completed.
+00:27:25 INFO  : 'after 3000' command is executed.
+00:27:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+00:27:28 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+00:27:28 INFO  : Context for 'APU' is selected.
+00:27:28 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+00:27:28 INFO  : 'configparams force-mem-access 1' command is executed.
+00:27:28 INFO  : Context for 'APU' is selected.
+00:27:28 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+00:27:29 INFO  : 'ps7_init' command is executed.
+00:27:29 INFO  : 'ps7_post_config' command is executed.
+00:27:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:27:30 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:27:30 INFO  : 'configparams force-mem-access 0' command is executed.
+00:27:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:27:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:27:30 INFO  : 'con' command is executed.
+00:27:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:27:30 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+00:29:22 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:29:26 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:29:43 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:29:45 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:30:01 INFO  : Disconnected from the channel tcfchan#2.
+00:30:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:30:02 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+00:30:02 INFO  : 'jtag frequency' command is executed.
+00:30:04 INFO  : Context for 'APU' is selected.
+00:30:04 INFO  : System reset is completed.
+00:30:07 INFO  : 'after 3000' command is executed.
+00:30:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+00:30:10 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+00:30:10 INFO  : Context for 'APU' is selected.
+00:30:13 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+00:30:13 INFO  : 'configparams force-mem-access 1' command is executed.
+00:30:13 INFO  : Context for 'APU' is selected.
+00:30:13 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+00:30:14 INFO  : 'ps7_init' command is executed.
+00:30:14 INFO  : 'ps7_post_config' command is executed.
+00:30:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:30:14 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:30:14 INFO  : 'configparams force-mem-access 0' command is executed.
+00:30:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:30:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:30:14 INFO  : 'con' command is executed.
+00:30:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:30:14 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+00:31:33 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:31:36 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:31:51 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:31:54 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:32:25 INFO  : Disconnected from the channel tcfchan#5.
+00:32:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:32:26 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+00:32:26 INFO  : 'jtag frequency' command is executed.
+00:32:26 INFO  : Context for 'APU' is selected.
+00:32:27 INFO  : System reset is completed.
+00:32:30 INFO  : 'after 3000' command is executed.
+00:32:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+00:32:32 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+00:32:32 INFO  : Context for 'APU' is selected.
+00:32:35 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+00:32:35 INFO  : 'configparams force-mem-access 1' command is executed.
+00:32:35 INFO  : Context for 'APU' is selected.
+00:32:35 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+00:32:35 INFO  : 'ps7_init' command is executed.
+00:32:35 INFO  : 'ps7_post_config' command is executed.
+00:32:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:32:36 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:32:36 INFO  : 'configparams force-mem-access 0' command is executed.
+00:32:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:32:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:32:36 INFO  : 'con' command is executed.
+00:32:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:32:36 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+00:33:19 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:33:22 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:33:33 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:33:35 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:33:47 INFO  : Disconnected from the channel tcfchan#8.
+00:33:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:33:48 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+00:33:48 INFO  : 'jtag frequency' command is executed.
+00:33:50 INFO  : Context for 'APU' is selected.
+00:33:50 INFO  : System reset is completed.
+00:33:53 INFO  : 'after 3000' command is executed.
+00:33:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+00:33:56 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+00:33:56 INFO  : Context for 'APU' is selected.
+00:33:59 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+00:33:59 INFO  : 'configparams force-mem-access 1' command is executed.
+00:33:59 INFO  : Context for 'APU' is selected.
+00:33:59 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+00:33:59 INFO  : 'ps7_init' command is executed.
+00:33:59 INFO  : 'ps7_post_config' command is executed.
+00:33:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:34:00 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:34:00 INFO  : 'configparams force-mem-access 0' command is executed.
+00:34:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:34:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:34:00 INFO  : 'con' command is executed.
+00:34:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:34:00 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+00:35:50 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:35:53 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:36:06 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:36:09 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:36:26 INFO  : Disconnected from the channel tcfchan#11.
+00:36:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:36:27 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+00:36:27 INFO  : 'jtag frequency' command is executed.
+00:36:29 INFO  : Context for 'APU' is selected.
+00:36:29 INFO  : System reset is completed.
+00:36:32 INFO  : 'after 3000' command is executed.
+00:36:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+00:36:34 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+00:36:34 INFO  : Context for 'APU' is selected.
+00:36:37 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+00:36:37 INFO  : 'configparams force-mem-access 1' command is executed.
+00:36:37 INFO  : Context for 'APU' is selected.
+00:36:37 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+00:36:38 INFO  : 'ps7_init' command is executed.
+00:36:38 INFO  : 'ps7_post_config' command is executed.
+00:36:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:36:39 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:36:39 INFO  : 'configparams force-mem-access 0' command is executed.
+00:36:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:36:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:36:39 INFO  : 'con' command is executed.
+00:36:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:36:39 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+00:37:20 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:37:23 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:37:35 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:37:38 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:37:55 INFO  : Disconnected from the channel tcfchan#14.
+00:37:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:37:56 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+00:37:56 INFO  : 'jtag frequency' command is executed.
+00:37:58 INFO  : Context for 'APU' is selected.
+00:37:58 INFO  : System reset is completed.
+00:38:01 INFO  : 'after 3000' command is executed.
+00:38:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+00:38:03 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+00:38:03 INFO  : Context for 'APU' is selected.
+00:38:06 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+00:38:06 INFO  : 'configparams force-mem-access 1' command is executed.
+00:38:06 INFO  : Context for 'APU' is selected.
+00:38:06 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+00:38:07 INFO  : 'ps7_init' command is executed.
+00:38:07 INFO  : 'ps7_post_config' command is executed.
+00:38:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:38:08 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:38:08 INFO  : 'configparams force-mem-access 0' command is executed.
+00:38:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:38:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:38:08 INFO  : 'con' command is executed.
+00:38:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:38:08 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+00:43:44 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:44:10 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:44:12 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:44:21 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:44:23 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:44:36 INFO  : Disconnected from the channel tcfchan#17.
+00:44:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:44:37 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+00:44:37 ERROR : port closed
+00:44:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:44:37 ERROR : port closed
+00:44:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:44:43 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+00:44:43 INFO  : 'jtag frequency' command is executed.
+00:44:43 INFO  : Context for 'APU' is selected.
+00:44:43 INFO  : System reset is completed.
+00:44:46 INFO  : 'after 3000' command is executed.
+00:44:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+00:44:49 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+00:44:49 INFO  : Context for 'APU' is selected.
+00:44:51 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+00:44:51 INFO  : 'configparams force-mem-access 1' command is executed.
+00:44:51 INFO  : Context for 'APU' is selected.
+00:44:51 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+00:44:52 INFO  : 'ps7_init' command is executed.
+00:44:52 INFO  : 'ps7_post_config' command is executed.
+00:44:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:44:52 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:44:53 INFO  : 'configparams force-mem-access 0' command is executed.
+00:44:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:44:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:44:53 INFO  : 'con' command is executed.
+00:44:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:44:53 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+00:45:13 INFO  : Disconnected from the channel tcfchan#20.
+00:45:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:45:14 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+00:45:14 INFO  : 'jtag frequency' command is executed.
+00:45:14 INFO  : Context for 'APU' is selected.
+00:45:14 INFO  : System reset is completed.
+00:45:17 INFO  : 'after 3000' command is executed.
+00:45:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+00:45:20 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+00:45:20 INFO  : Context for 'APU' is selected.
+00:45:23 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+00:45:23 INFO  : 'configparams force-mem-access 1' command is executed.
+00:45:23 INFO  : Context for 'APU' is selected.
+00:45:23 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+00:45:24 INFO  : 'ps7_init' command is executed.
+00:45:24 INFO  : 'ps7_post_config' command is executed.
+00:45:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:45:24 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:45:24 INFO  : 'configparams force-mem-access 0' command is executed.
+00:45:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:45:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:45:24 INFO  : 'con' command is executed.
+00:45:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:45:24 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+00:47:32 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:47:34 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:47:42 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:47:44 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:47:56 INFO  : Disconnected from the channel tcfchan#21.
+00:47:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:48:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:48:06 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+00:48:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:48:12 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+00:48:12 INFO  : 'jtag frequency' command is executed.
+00:48:12 INFO  : Context for 'APU' is selected.
+00:48:13 INFO  : System reset is completed.
+00:48:16 INFO  : 'after 3000' command is executed.
+00:48:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+00:48:18 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+00:48:18 INFO  : Context for 'APU' is selected.
+00:48:21 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+00:48:21 INFO  : 'configparams force-mem-access 1' command is executed.
+00:48:21 INFO  : Context for 'APU' is selected.
+00:48:21 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+00:48:22 INFO  : 'ps7_init' command is executed.
+00:48:22 INFO  : 'ps7_post_config' command is executed.
+00:48:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:48:22 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:48:22 INFO  : 'configparams force-mem-access 0' command is executed.
+00:48:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:48:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:48:22 INFO  : 'con' command is executed.
+00:48:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:48:22 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+00:49:50 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:49:52 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:50:00 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:50:03 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:50:14 INFO  : Disconnected from the channel tcfchan#24.
+00:50:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:50:15 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+00:50:15 INFO  : 'jtag frequency' command is executed.
+00:50:17 INFO  : Context for 'APU' is selected.
+00:50:17 INFO  : System reset is completed.
+00:50:20 INFO  : 'after 3000' command is executed.
+00:50:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+00:50:23 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+00:50:23 INFO  : Context for 'APU' is selected.
+00:50:25 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+00:50:25 INFO  : 'configparams force-mem-access 1' command is executed.
+00:50:25 INFO  : Context for 'APU' is selected.
+00:50:25 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+00:50:26 INFO  : 'ps7_init' command is executed.
+00:50:26 INFO  : 'ps7_post_config' command is executed.
+00:50:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:50:27 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:50:27 INFO  : 'configparams force-mem-access 0' command is executed.
+00:50:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:50:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:50:27 INFO  : 'con' command is executed.
+00:50:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:50:27 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+00:53:45 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:53:48 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:53:56 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:53:58 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:54:15 INFO  : Disconnected from the channel tcfchan#27.
+00:54:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:54:17 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+00:54:17 INFO  : 'jtag frequency' command is executed.
+00:54:17 INFO  : Context for 'APU' is selected.
+00:54:17 INFO  : System reset is completed.
+00:54:20 INFO  : 'after 3000' command is executed.
+00:54:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+00:54:22 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+00:54:22 INFO  : Context for 'APU' is selected.
+00:54:25 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+00:54:25 INFO  : 'configparams force-mem-access 1' command is executed.
+00:54:25 INFO  : Context for 'APU' is selected.
+00:54:25 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+00:54:26 INFO  : 'ps7_init' command is executed.
+00:54:26 INFO  : 'ps7_post_config' command is executed.
+00:54:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:54:26 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:54:26 INFO  : 'configparams force-mem-access 0' command is executed.
+00:54:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:54:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:54:26 INFO  : 'con' command is executed.
+00:54:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:54:26 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+00:57:52 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:58:05 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:58:08 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:58:13 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+00:58:15 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+00:58:25 INFO  : Disconnected from the channel tcfchan#30.
+00:58:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:58:27 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+00:58:27 INFO  : 'jtag frequency' command is executed.
+00:58:27 INFO  : Context for 'APU' is selected.
+00:58:27 INFO  : System reset is completed.
+00:58:30 INFO  : 'after 3000' command is executed.
+00:58:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+00:58:32 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+00:58:32 INFO  : Context for 'APU' is selected.
+00:58:35 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+00:58:35 INFO  : 'configparams force-mem-access 1' command is executed.
+00:58:35 INFO  : Context for 'APU' is selected.
+00:58:35 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+00:58:36 INFO  : 'ps7_init' command is executed.
+00:58:36 INFO  : 'ps7_post_config' command is executed.
+00:58:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:58:36 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:58:36 INFO  : 'configparams force-mem-access 0' command is executed.
+00:58:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:58:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:58:37 INFO  : 'con' command is executed.
+00:58:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:58:37 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+01:01:46 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:01:50 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:02:13 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:02:15 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:02:29 INFO  : Disconnected from the channel tcfchan#33.
+01:02:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:02:31 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:02:31 ERROR : port closed
+01:02:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+01:02:31 ERROR : port closed
+01:02:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:02:36 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:02:36 INFO  : 'jtag frequency' command is executed.
+01:02:37 INFO  : Context for 'APU' is selected.
+01:02:37 INFO  : System reset is completed.
+01:02:40 INFO  : 'after 3000' command is executed.
+01:02:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+01:02:42 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+01:02:42 INFO  : Context for 'APU' is selected.
+01:02:45 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+01:02:45 INFO  : 'configparams force-mem-access 1' command is executed.
+01:02:45 INFO  : Context for 'APU' is selected.
+01:02:45 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+01:02:46 INFO  : 'ps7_init' command is executed.
+01:02:46 INFO  : 'ps7_post_config' command is executed.
+01:02:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:02:47 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:02:47 INFO  : 'configparams force-mem-access 0' command is executed.
+01:02:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:02:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:02:47 INFO  : 'con' command is executed.
+01:02:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:02:47 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+01:03:01 INFO  : Disconnected from the channel tcfchan#36.
+01:03:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:03:03 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:03:03 INFO  : 'jtag frequency' command is executed.
+01:03:03 INFO  : Context for 'APU' is selected.
+01:03:03 INFO  : System reset is completed.
+01:03:06 INFO  : 'after 3000' command is executed.
+01:03:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+01:03:09 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+01:03:09 INFO  : Context for 'APU' is selected.
+01:03:11 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+01:03:11 INFO  : 'configparams force-mem-access 1' command is executed.
+01:03:11 INFO  : Context for 'APU' is selected.
+01:03:11 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+01:03:12 INFO  : 'ps7_init' command is executed.
+01:03:12 INFO  : 'ps7_post_config' command is executed.
+01:03:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:03:13 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:03:13 INFO  : 'configparams force-mem-access 0' command is executed.
+01:03:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:03:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:03:13 INFO  : 'con' command is executed.
+01:03:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:03:13 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+01:03:53 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:03:56 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:04:02 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:04:04 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:04:15 INFO  : Disconnected from the channel tcfchan#37.
+01:04:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:04:16 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:04:16 INFO  : 'jtag frequency' command is executed.
+01:04:16 INFO  : Context for 'APU' is selected.
+01:04:16 INFO  : System reset is completed.
+01:04:19 INFO  : 'after 3000' command is executed.
+01:04:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+01:04:22 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+01:04:22 INFO  : Context for 'APU' is selected.
+01:04:24 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+01:04:24 INFO  : 'configparams force-mem-access 1' command is executed.
+01:04:24 INFO  : Context for 'APU' is selected.
+01:04:24 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+01:04:25 INFO  : 'ps7_init' command is executed.
+01:04:25 INFO  : 'ps7_post_config' command is executed.
+01:04:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:04:26 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:04:26 INFO  : 'configparams force-mem-access 0' command is executed.
+01:04:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:04:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:04:26 INFO  : 'con' command is executed.
+01:04:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:04:26 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+01:04:41 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:04:44 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:04:55 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:04:57 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:05:08 INFO  : Disconnected from the channel tcfchan#40.
+01:05:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:05:10 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:05:10 INFO  : 'jtag frequency' command is executed.
+01:05:12 INFO  : Context for 'APU' is selected.
+01:05:12 INFO  : System reset is completed.
+01:05:15 INFO  : 'after 3000' command is executed.
+01:05:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+01:05:17 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+01:05:17 INFO  : Context for 'APU' is selected.
+01:05:20 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+01:05:20 INFO  : 'configparams force-mem-access 1' command is executed.
+01:05:20 INFO  : Context for 'APU' is selected.
+01:05:20 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+01:05:21 INFO  : 'ps7_init' command is executed.
+01:05:21 INFO  : 'ps7_post_config' command is executed.
+01:05:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:05:21 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:05:21 INFO  : 'configparams force-mem-access 0' command is executed.
+01:05:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:05:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:05:21 INFO  : 'con' command is executed.
+01:05:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:05:22 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+01:05:57 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:06:00 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:06:10 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:06:12 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:06:27 INFO  : Disconnected from the channel tcfchan#43.
+01:06:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:06:28 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:06:28 ERROR : port closed
+01:06:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+01:06:28 ERROR : port closed
+01:06:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:06:34 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:06:34 INFO  : 'jtag frequency' command is executed.
+01:06:34 INFO  : Context for 'APU' is selected.
+01:06:34 INFO  : System reset is completed.
+01:06:37 INFO  : 'after 3000' command is executed.
+01:06:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+01:06:40 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+01:06:40 INFO  : Context for 'APU' is selected.
+01:06:43 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+01:06:43 INFO  : 'configparams force-mem-access 1' command is executed.
+01:06:43 INFO  : Context for 'APU' is selected.
+01:06:43 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+01:06:44 INFO  : 'ps7_init' command is executed.
+01:06:44 INFO  : 'ps7_post_config' command is executed.
+01:06:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:06:44 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:06:44 INFO  : 'configparams force-mem-access 0' command is executed.
+01:06:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:06:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:06:44 INFO  : 'con' command is executed.
+01:06:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:06:44 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+01:22:07 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:22:10 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:22:24 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:22:26 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:22:42 INFO  : Disconnected from the channel tcfchan#46.
+01:22:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:22:43 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:22:43 INFO  : 'jtag frequency' command is executed.
+01:22:44 INFO  : Context for 'APU' is selected.
+01:22:44 INFO  : System reset is completed.
+01:22:47 INFO  : 'after 3000' command is executed.
+01:22:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+01:22:49 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+01:22:49 INFO  : Context for 'APU' is selected.
+01:22:52 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+01:22:52 INFO  : 'configparams force-mem-access 1' command is executed.
+01:22:52 INFO  : Context for 'APU' is selected.
+01:22:52 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+01:22:53 INFO  : 'ps7_init' command is executed.
+01:22:53 INFO  : 'ps7_post_config' command is executed.
+01:22:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:22:53 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:22:53 INFO  : 'configparams force-mem-access 0' command is executed.
+01:22:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:22:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:22:53 INFO  : 'con' command is executed.
+01:22:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:22:53 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+01:23:48 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:23:51 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:23:59 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:24:02 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:24:14 INFO  : Disconnected from the channel tcfchan#49.
+01:24:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:24:15 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:24:15 INFO  : 'jtag frequency' command is executed.
+01:24:16 INFO  : Context for 'APU' is selected.
+01:24:16 INFO  : System reset is completed.
+01:24:19 INFO  : 'after 3000' command is executed.
+01:24:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+01:24:22 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+01:24:22 INFO  : Context for 'APU' is selected.
+01:24:24 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+01:24:24 INFO  : 'configparams force-mem-access 1' command is executed.
+01:24:24 INFO  : Context for 'APU' is selected.
+01:24:24 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+01:24:25 INFO  : 'ps7_init' command is executed.
+01:24:25 INFO  : 'ps7_post_config' command is executed.
+01:24:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:24:26 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:24:26 INFO  : 'configparams force-mem-access 0' command is executed.
+01:24:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:24:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:24:26 INFO  : 'con' command is executed.
+01:24:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:24:26 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+01:25:22 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:25:25 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:25:35 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:25:37 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:25:47 INFO  : Disconnected from the channel tcfchan#52.
+01:25:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:25:48 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:25:48 INFO  : 'jtag frequency' command is executed.
+01:25:48 INFO  : Context for 'APU' is selected.
+01:25:48 INFO  : System reset is completed.
+01:25:51 INFO  : 'after 3000' command is executed.
+01:25:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+01:25:53 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+01:25:53 INFO  : Context for 'APU' is selected.
+01:25:57 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+01:25:57 INFO  : 'configparams force-mem-access 1' command is executed.
+01:25:57 INFO  : Context for 'APU' is selected.
+01:25:57 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+01:25:58 INFO  : 'ps7_init' command is executed.
+01:25:58 INFO  : 'ps7_post_config' command is executed.
+01:25:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:25:58 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:25:58 INFO  : 'configparams force-mem-access 0' command is executed.
+01:25:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:25:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:25:58 INFO  : 'con' command is executed.
+01:25:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:25:58 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+01:26:43 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:26:45 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:26:56 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:26:59 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:27:06 INFO  : Disconnected from the channel tcfchan#55.
+01:27:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:27:07 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:27:07 INFO  : 'jtag frequency' command is executed.
+01:27:07 INFO  : Context for 'APU' is selected.
+01:27:07 INFO  : System reset is completed.
+01:27:10 INFO  : 'after 3000' command is executed.
+01:27:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+01:27:13 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+01:27:13 INFO  : Context for 'APU' is selected.
+01:27:16 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+01:27:16 INFO  : 'configparams force-mem-access 1' command is executed.
+01:27:16 INFO  : Context for 'APU' is selected.
+01:27:16 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+01:27:16 INFO  : 'ps7_init' command is executed.
+01:27:16 INFO  : 'ps7_post_config' command is executed.
+01:27:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:27:17 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:27:17 INFO  : 'configparams force-mem-access 0' command is executed.
+01:27:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:27:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:27:17 INFO  : 'con' command is executed.
+01:27:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:27:17 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+01:32:19 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:32:32 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:32:35 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:34:07 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:34:10 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:34:20 INFO  : Disconnected from the channel tcfchan#58.
+01:34:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:34:21 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:34:21 INFO  : 'jtag frequency' command is executed.
+01:34:21 INFO  : Context for 'APU' is selected.
+01:34:21 INFO  : System reset is completed.
+01:34:24 INFO  : 'after 3000' command is executed.
+01:34:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+01:34:26 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+01:34:27 INFO  : Context for 'APU' is selected.
+01:34:29 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+01:34:29 INFO  : 'configparams force-mem-access 1' command is executed.
+01:34:29 INFO  : Context for 'APU' is selected.
+01:34:29 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+01:34:30 INFO  : 'ps7_init' command is executed.
+01:34:30 INFO  : 'ps7_post_config' command is executed.
+01:34:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:34:30 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:34:30 INFO  : 'configparams force-mem-access 0' command is executed.
+01:34:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:34:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:34:31 INFO  : 'con' command is executed.
+01:34:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:34:31 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+01:37:59 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:38:26 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:38:29 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:38:34 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:38:37 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:38:47 INFO  : Disconnected from the channel tcfchan#61.
+01:38:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:38:48 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:38:48 INFO  : 'jtag frequency' command is executed.
+01:38:49 INFO  : Context for 'APU' is selected.
+01:38:49 INFO  : System reset is completed.
+01:38:52 INFO  : 'after 3000' command is executed.
+01:38:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+01:38:55 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+01:38:55 INFO  : Context for 'APU' is selected.
+01:38:57 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+01:38:57 INFO  : 'configparams force-mem-access 1' command is executed.
+01:38:57 INFO  : Context for 'APU' is selected.
+01:38:57 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+01:38:58 INFO  : 'ps7_init' command is executed.
+01:38:58 INFO  : 'ps7_post_config' command is executed.
+01:38:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:38:59 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:38:59 INFO  : 'configparams force-mem-access 0' command is executed.
+01:38:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:38:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:38:59 INFO  : 'con' command is executed.
+01:38:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:38:59 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+01:39:24 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:39:27 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:39:36 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:39:39 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:39:48 INFO  : Disconnected from the channel tcfchan#64.
+01:39:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:39:49 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:39:49 INFO  : 'jtag frequency' command is executed.
+01:39:49 INFO  : Context for 'APU' is selected.
+01:39:49 INFO  : System reset is completed.
+01:39:52 INFO  : 'after 3000' command is executed.
+01:39:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+01:39:55 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+01:39:55 INFO  : Context for 'APU' is selected.
+01:39:58 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+01:39:58 INFO  : 'configparams force-mem-access 1' command is executed.
+01:39:58 INFO  : Context for 'APU' is selected.
+01:39:58 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+01:39:59 INFO  : 'ps7_init' command is executed.
+01:39:59 INFO  : 'ps7_post_config' command is executed.
+01:39:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:39:59 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:39:59 INFO  : 'configparams force-mem-access 0' command is executed.
+01:39:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:40:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:40:00 INFO  : 'con' command is executed.
+01:40:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:40:00 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+01:45:14 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:45:17 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:45:25 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:45:27 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:45:36 INFO  : Disconnected from the channel tcfchan#67.
+01:45:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:45:38 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:45:38 ERROR : port closed
+01:45:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+01:45:38 ERROR : port closed
+01:45:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:45:45 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:45:45 INFO  : 'jtag frequency' command is executed.
+01:45:45 INFO  : Context for 'APU' is selected.
+01:45:45 INFO  : System reset is completed.
+01:45:48 INFO  : 'after 3000' command is executed.
+01:45:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+01:45:50 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+01:45:50 INFO  : Context for 'APU' is selected.
+01:45:53 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+01:45:53 INFO  : 'configparams force-mem-access 1' command is executed.
+01:45:53 INFO  : Context for 'APU' is selected.
+01:45:53 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+01:45:55 INFO  : 'ps7_init' command is executed.
+01:45:55 INFO  : 'ps7_post_config' command is executed.
+01:45:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:45:55 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:45:55 INFO  : 'configparams force-mem-access 0' command is executed.
+01:45:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:45:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:45:56 INFO  : 'con' command is executed.
+01:45:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:45:56 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+01:50:14 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:50:17 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:50:27 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:50:30 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa is already opened
+
+01:50:39 INFO  : Disconnected from the channel tcfchan#70.
+01:50:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:50:40 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:50:40 INFO  : 'jtag frequency' command is executed.
+01:50:42 INFO  : Context for 'APU' is selected.
+01:50:42 INFO  : System reset is completed.
+01:50:45 INFO  : 'after 3000' command is executed.
+01:50:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+01:50:48 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+01:50:48 INFO  : Context for 'APU' is selected.
+01:50:51 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+01:50:51 INFO  : 'configparams force-mem-access 1' command is executed.
+01:50:51 INFO  : Context for 'APU' is selected.
+01:50:51 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+01:50:52 INFO  : 'ps7_init' command is executed.
+01:50:52 INFO  : 'ps7_post_config' command is executed.
+01:50:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:50:53 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:50:53 INFO  : 'configparams force-mem-access 0' command is executed.
+01:50:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:50:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:50:53 INFO  : 'con' command is executed.
+01:50:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:50:53 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+01:53:33 INFO  : Result from executing command 'removePlatformRepo': 
+01:54:13 INFO  : Result from executing command 'getProjects': Pmod_OLED_wrapper
+01:54:13 INFO  : Result from executing command 'getPlatforms': 
+01:54:13 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:54:27 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:54:42 INFO  : Disconnected from the channel tcfchan#73.
+01:54:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:54:43 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:54:43 INFO  : 'jtag frequency' command is executed.
+01:54:45 INFO  : Context for 'APU' is selected.
+01:54:45 INFO  : System reset is completed.
+01:54:48 INFO  : 'after 3000' command is executed.
+01:54:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+01:54:50 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+01:54:50 INFO  : Context for 'APU' is selected.
+01:54:53 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+01:54:53 INFO  : 'configparams force-mem-access 1' command is executed.
+01:54:53 INFO  : Context for 'APU' is selected.
+01:54:53 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+01:54:54 INFO  : 'ps7_init' command is executed.
+01:54:54 INFO  : 'ps7_post_config' command is executed.
+01:54:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:54:54 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:54:54 INFO  : 'configparams force-mem-access 0' command is executed.
+01:54:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:54:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:54:54 INFO  : 'con' command is executed.
+01:54:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:54:54 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+01:56:04 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:56:14 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+01:56:31 INFO  : Disconnected from the channel tcfchan#78.
+01:56:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:56:32 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+01:56:32 INFO  : 'jtag frequency' command is executed.
+01:56:33 INFO  : Context for 'APU' is selected.
+01:56:33 INFO  : System reset is completed.
+01:56:36 INFO  : 'after 3000' command is executed.
+01:56:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+01:56:38 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+01:56:38 INFO  : Context for 'APU' is selected.
+01:56:38 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+01:56:38 INFO  : 'configparams force-mem-access 1' command is executed.
+01:56:38 INFO  : Context for 'APU' is selected.
+01:56:38 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+01:56:39 INFO  : 'ps7_init' command is executed.
+01:56:39 INFO  : 'ps7_post_config' command is executed.
+01:56:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:56:40 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:56:40 INFO  : 'configparams force-mem-access 0' command is executed.
+01:56:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:56:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:56:40 INFO  : 'con' command is executed.
+01:56:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:56:40 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+02:02:28 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+02:02:44 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+02:03:03 INFO  : Disconnected from the channel tcfchan#81.
+02:03:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:03:05 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+02:03:05 ERROR : port closed
+02:03:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+02:03:05 ERROR : port closed
+02:03:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:03:15 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+02:03:15 INFO  : 'jtag frequency' command is executed.
+02:03:15 INFO  : Context for 'APU' is selected.
+02:03:15 INFO  : System reset is completed.
+02:03:18 INFO  : 'after 3000' command is executed.
+02:03:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+02:03:20 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+02:03:20 INFO  : Context for 'APU' is selected.
+02:03:20 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+02:03:20 INFO  : 'configparams force-mem-access 1' command is executed.
+02:03:20 INFO  : Context for 'APU' is selected.
+02:03:20 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+02:03:21 INFO  : 'ps7_init' command is executed.
+02:03:21 INFO  : 'ps7_post_config' command is executed.
+02:03:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:03:22 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:03:22 INFO  : 'configparams force-mem-access 0' command is executed.
+02:03:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:03:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:03:22 INFO  : 'con' command is executed.
+02:03:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+02:03:22 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+02:04:07 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+02:04:19 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+02:04:30 INFO  : Disconnected from the channel tcfchan#84.
+02:04:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:04:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+02:04:41 ERROR : Could not find Jtag device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+02:04:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:04:49 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+02:04:49 INFO  : 'jtag frequency' command is executed.
+02:04:49 INFO  : Context for 'APU' is selected.
+02:04:49 INFO  : System reset is completed.
+02:04:52 INFO  : 'after 3000' command is executed.
+02:04:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+02:04:54 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+02:04:54 INFO  : Context for 'APU' is selected.
+02:04:54 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+02:04:54 INFO  : 'configparams force-mem-access 1' command is executed.
+02:04:54 INFO  : Context for 'APU' is selected.
+02:04:54 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+02:04:55 INFO  : 'ps7_init' command is executed.
+02:04:55 INFO  : 'ps7_post_config' command is executed.
+02:04:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:04:55 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:04:55 INFO  : 'configparams force-mem-access 0' command is executed.
+02:04:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:04:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:04:55 INFO  : 'con' command is executed.
+02:04:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+02:04:55 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+02:05:49 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+02:05:59 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+02:06:16 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+02:06:28 INFO  : Disconnected from the channel tcfchan#87.
+02:06:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:06:30 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+02:06:30 INFO  : 'jtag frequency' command is executed.
+02:06:30 INFO  : Context for 'APU' is selected.
+02:06:30 INFO  : System reset is completed.
+02:06:33 INFO  : 'after 3000' command is executed.
+02:06:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+02:06:36 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+02:06:36 INFO  : Context for 'APU' is selected.
+02:06:36 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+02:06:36 INFO  : 'configparams force-mem-access 1' command is executed.
+02:06:36 INFO  : Context for 'APU' is selected.
+02:06:36 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+02:06:37 INFO  : 'ps7_init' command is executed.
+02:06:37 INFO  : 'ps7_post_config' command is executed.
+02:06:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:06:37 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:06:37 INFO  : 'configparams force-mem-access 0' command is executed.
+02:06:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:06:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:06:37 INFO  : 'con' command is executed.
+02:06:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+02:06:37 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+02:07:35 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+02:07:43 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+02:08:00 INFO  : Disconnected from the channel tcfchan#90.
+02:08:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:08:01 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+02:08:01 INFO  : 'jtag frequency' command is executed.
+02:08:03 INFO  : Context for 'APU' is selected.
+02:08:03 INFO  : System reset is completed.
+02:08:06 INFO  : 'after 3000' command is executed.
+02:08:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+02:08:09 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+02:08:09 INFO  : Context for 'APU' is selected.
+02:08:09 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+02:08:09 INFO  : 'configparams force-mem-access 1' command is executed.
+02:08:09 INFO  : Context for 'APU' is selected.
+02:08:09 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+02:08:09 INFO  : 'ps7_init' command is executed.
+02:08:10 INFO  : 'ps7_post_config' command is executed.
+02:08:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:08:10 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:08:10 INFO  : 'configparams force-mem-access 0' command is executed.
+02:08:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:08:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:08:10 INFO  : 'con' command is executed.
+02:08:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+02:08:10 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+02:08:52 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+02:09:02 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+02:09:18 INFO  : Disconnected from the channel tcfchan#93.
+02:09:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:09:19 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+02:09:19 INFO  : 'jtag frequency' command is executed.
+02:09:21 INFO  : Context for 'APU' is selected.
+02:09:21 INFO  : System reset is completed.
+02:09:24 INFO  : 'after 3000' command is executed.
+02:09:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+02:09:27 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+02:09:27 INFO  : Context for 'APU' is selected.
+02:09:27 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+02:09:27 INFO  : 'configparams force-mem-access 1' command is executed.
+02:09:27 INFO  : Context for 'APU' is selected.
+02:09:27 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+02:09:28 INFO  : 'ps7_init' command is executed.
+02:09:28 INFO  : 'ps7_post_config' command is executed.
+02:09:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:09:28 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:09:28 INFO  : 'configparams force-mem-access 0' command is executed.
+02:09:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:09:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:09:29 INFO  : 'con' command is executed.
+02:09:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+02:09:29 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+02:09:56 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+02:10:09 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+02:10:25 INFO  : Disconnected from the channel tcfchan#96.
+02:10:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:10:27 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+02:10:27 INFO  : 'jtag frequency' command is executed.
+02:10:27 INFO  : Context for 'APU' is selected.
+02:10:27 INFO  : System reset is completed.
+02:10:30 INFO  : 'after 3000' command is executed.
+02:10:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+02:10:32 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+02:10:32 INFO  : Context for 'APU' is selected.
+02:10:32 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+02:10:32 INFO  : 'configparams force-mem-access 1' command is executed.
+02:10:32 INFO  : Context for 'APU' is selected.
+02:10:32 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+02:10:33 INFO  : 'ps7_init' command is executed.
+02:10:33 INFO  : 'ps7_post_config' command is executed.
+02:10:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:10:34 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:10:34 INFO  : 'configparams force-mem-access 0' command is executed.
+02:10:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:10:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:10:34 INFO  : 'con' command is executed.
+02:10:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+02:10:34 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+02:10:58 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+02:11:08 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+02:11:21 INFO  : Disconnected from the channel tcfchan#99.
+02:11:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:11:22 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+02:11:22 ERROR : port closed
+02:11:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+02:11:22 ERROR : port closed
+02:11:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:11:36 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+02:11:36 INFO  : 'jtag frequency' command is executed.
+02:11:36 INFO  : Context for 'APU' is selected.
+02:11:36 INFO  : System reset is completed.
+02:11:39 INFO  : 'after 3000' command is executed.
+02:11:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+02:11:41 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+02:11:41 INFO  : Context for 'APU' is selected.
+02:11:41 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+02:11:41 INFO  : 'configparams force-mem-access 1' command is executed.
+02:11:41 INFO  : Context for 'APU' is selected.
+02:11:41 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+02:11:42 INFO  : 'ps7_init' command is executed.
+02:11:42 INFO  : 'ps7_post_config' command is executed.
+02:11:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:11:43 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:11:43 INFO  : 'configparams force-mem-access 0' command is executed.
+02:11:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:11:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:11:43 INFO  : 'con' command is executed.
+02:11:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+02:11:43 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+02:13:53 INFO  : Disconnected from the channel tcfchan#102.
+17:51:33 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\temp_xsdb_launch_script.tcl
+17:51:37 INFO  : XSCT server has started successfully.
+17:51:37 INFO  : Successfully done setting XSCT server connection channel  
+17:51:37 INFO  : plnx-install-location is set to ''
+17:51:37 INFO  : Successfully done setting workspace for the tool. 
+17:51:59 INFO  : Registering command handlers for Vitis TCF services
+17:51:59 INFO  : Platform repository initialization has completed.
+17:51:59 INFO  : Successfully done query RDI_DATADIR 
+12:07:53 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\temp_xsdb_launch_script.tcl
+12:07:56 INFO  : XSCT server has started successfully.
+12:07:56 INFO  : plnx-install-location is set to ''
+12:07:56 INFO  : Successfully done setting XSCT server connection channel  
+12:07:56 INFO  : Successfully done setting workspace for the tool. 
+12:07:57 INFO  : Registering command handlers for Vitis TCF services
+12:07:57 INFO  : Platform repository initialization has completed.
+12:07:57 INFO  : Successfully done query RDI_DATADIR 
+09:54:12 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\temp_xsdb_launch_script.tcl
+09:54:15 INFO  : XSCT server has started successfully.
+09:54:15 INFO  : plnx-install-location is set to ''
+09:54:15 INFO  : Successfully done setting XSCT server connection channel  
+09:54:15 INFO  : Successfully done setting workspace for the tool. 
+09:54:38 INFO  : Registering command handlers for Vitis TCF services
+09:54:38 INFO  : Platform repository initialization has completed.
+09:54:38 INFO  : Successfully done query RDI_DATADIR 
+12:50:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:50:03 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+12:50:04 INFO  : 'jtag frequency' command is executed.
+12:50:04 INFO  : Context for 'APU' is selected.
+12:50:04 INFO  : System reset is completed.
+12:50:07 INFO  : 'after 3000' command is executed.
+12:50:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+12:50:10 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+12:50:10 INFO  : Context for 'APU' is selected.
+12:50:10 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+12:50:10 INFO  : 'configparams force-mem-access 1' command is executed.
+12:50:10 INFO  : Context for 'APU' is selected.
+12:50:10 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+12:50:14 INFO  : 'ps7_init' command is executed.
+12:50:14 INFO  : 'ps7_post_config' command is executed.
+12:50:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:50:15 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:50:15 INFO  : 'configparams force-mem-access 0' command is executed.
+12:50:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:50:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:50:16 INFO  : 'con' command is executed.
+12:50:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:50:16 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+12:52:56 INFO  : Result from executing command 'getProjects': Pmod_OLED_wrapper
+12:52:56 INFO  : Result from executing command 'getPlatforms': Pmod_OLED_wrapper|C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/Pmod_OLED_wrapper.xpfm
+12:52:56 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+12:53:39 INFO  : Checking for BSP changes to sync application flags for project 'Pmod_OLED'...
+12:54:33 INFO  : Launching the emulator on project 'Pmod_OLED' for configuration 'Debug'
+12:54:33 INFO  : Launching QEMU with command 'launch_emulator.bat -device-family 7series -pid-file emulation.pid -t sw_emu -gdb-port 1137'
+12:54:40 INFO  : Stopping the emulator on project 'Pmod_OLED' for configuration 'Debug'
+12:54:55 ERROR : Pid file required for stopping the emulator is not created at 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED\Debug\emulation.pid'.
+12:54:55 ERROR : Failed to stop the emulator.
+12:55:00 INFO  : Emulator has terminated.
+12:55:00 INFO  : The emulator is not running, terminating debug launch configuration
+12:56:34 INFO  : Disconnected from the channel tcfchan#1.
+12:56:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:56:35 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+12:56:36 INFO  : 'jtag frequency' command is executed.
+12:56:39 ERROR : no targets found with "name =~"APU*"". available targets: none
+12:56:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+----------------End of Script----------------
+
+12:56:39 ERROR : no targets found with "name =~"APU*"". available targets: none
+12:56:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:56:47 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+12:56:47 INFO  : 'jtag frequency' command is executed.
+12:56:47 INFO  : Context for 'APU' is selected.
+12:56:47 INFO  : System reset is completed.
+12:56:50 INFO  : 'after 3000' command is executed.
+12:56:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+12:56:53 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+12:56:53 INFO  : Context for 'APU' is selected.
+12:56:55 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+12:56:55 INFO  : 'configparams force-mem-access 1' command is executed.
+12:56:55 INFO  : Context for 'APU' is selected.
+12:56:55 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+12:56:57 INFO  : 'ps7_init' command is executed.
+12:56:57 INFO  : 'ps7_post_config' command is executed.
+12:56:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:56:58 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:56:58 INFO  : 'configparams force-mem-access 0' command is executed.
+12:56:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:56:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:57:00 INFO  : 'con' command is executed.
+12:57:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:57:00 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+13:03:14 INFO  : Disconnected from the channel tcfchan#5.
+13:20:47 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\temp_xsdb_launch_script.tcl
+13:20:50 INFO  : XSCT server has started successfully.
+13:20:50 INFO  : plnx-install-location is set to ''
+13:20:50 INFO  : Successfully done setting XSCT server connection channel  
+13:20:50 INFO  : Successfully done setting workspace for the tool. 
+13:21:05 ERROR : Hardware specification file is not configured properly in the launch configuration 'Debugger_Pmod_OLED-Default'. 
+Make sure that the application 'Pmod_OLED' is built properly for configuration 'Debug' before launching.
+13:21:08 ERROR : Hardware specification file is not configured properly in the launch configuration 'Debugger_Pmod_OLED-Default'. 
+Make sure that the application 'Pmod_OLED' is built properly for configuration 'Debug' before launching.
+13:21:12 INFO  : Platform repository initialization has completed.
+13:21:12 INFO  : Successfully done query RDI_DATADIR 
+13:21:12 INFO  : Registering command handlers for Vitis TCF services
+13:21:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:21:40 INFO  : Jtag cable 'Digilent Zybo Z7 210351B481C2A' is selected.
+13:21:40 INFO  : 'jtag frequency' command is executed.
+13:21:40 INFO  : Context for 'APU' is selected.
+13:21:40 INFO  : System reset is completed.
+13:21:43 INFO  : 'after 3000' command is executed.
+13:21:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}' command is executed.
+13:21:46 INFO  : Device configured successfully with "C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit"
+13:21:46 INFO  : Context for 'APU' is selected.
+13:21:47 INFO  : Hardware design and registers information is loaded from 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa'.
+13:21:47 INFO  : 'configparams force-mem-access 1' command is executed.
+13:21:47 INFO  : Context for 'APU' is selected.
+13:21:47 INFO  : Sourcing of 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl' is done.
+13:21:51 INFO  : 'ps7_init' command is executed.
+13:21:51 INFO  : 'ps7_post_config' command is executed.
+13:21:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:21:51 INFO  : The application 'C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:21:52 INFO  : 'configparams force-mem-access 0' command is executed.
+13:21:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B481C2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B481C2A-23727093-0"}
+fpga -file C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/bitstream/Pmod_OLED_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED_wrapper/export/Pmod_OLED_wrapper/hw/Pmod_OLED_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/Pmod_OLED/Pmod_OLED/Debug/Pmod_OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:21:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:21:53 INFO  : 'con' command is executed.
+13:21:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:21:53 INFO  : Launch script is exported to file 'C:\Users\luisr\Desktop\Vitis\Graduate_Project\FPGA\Pmod_OLED\Pmod_OLED_system\_ide\scripts\debugger_pmod_oled-default.tcl'
+13:28:50 INFO  : Disconnected from the channel tcfchan#1.

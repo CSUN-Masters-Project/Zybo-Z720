@@ -1,0 +1,231 @@
+#include <stdio.h>
+#include <stdint.h>
+#include "PmodAD2.h"
+#include "sleep.h"
+#include "platform.h"
+#include "xparameters.h"
+#include "xil_io.h"
+#include "xil_printf.h"
+
+#define global_timer_clk 333000000 //global timer clock frequency 333MHz
+#define global_time_base 0xF8F00200
+//#define size 20000 //20,000 samples = 12 seconds of data
+//#define window_size 700 //minimum window size 700 elements
+#define size 100000 //100,000 samples = 60 seconds of data
+#define window_size 1000 //minimum window size 1000 elements
+
+
+//Pulse Sensor
+PmodAD2 myDevice;
+u8 channel;
+double voltage;
+u16 volt;
+//u16 conv;
+static u16 conv[size] = {'\0'};
+
+//Timer function
+static uint64_t timestamp[size] = {'\0'};
+static double tmp[size] = {'\0'};
+static double dummy[size] = {'\0'};
+static double t_diff[size] = {'\0'};
+
+//Moving Average
+uint32_t array[window_size] = {'\0'}; //window size
+uint32_t mov_avg_array[size] = {'\0'}; //array for storing moving avg
+uint32_t power[size];
+uint32_t sum = 0;
+uint64_t sum_avg = 0;
+uint32_t mov_avg = 0;
+uint32_t cnt = 0;
+int x = 0;
+int i =0;
+
+//DDR memory base address 0x200
+//#define ddr_base 0x00000200
+
+uint64_t time_elapsed(); //allows function to be used globally
+
+int main()
+{
+    //int sample[100000];
+    //int timestamp[100000];
+	init_platform();
+
+    print("Hello World\n\r");
+    print("Successfully ran Hello World application");
+
+    //initialize PMOD AD2
+    AD2_begin(&myDevice, XPAR_PMODAD2_0_AXI_LITE_IIC_BASEADDR, AD2_IIC_ADDR);
+
+    // Turn on channel 0
+    AD2_WriteConfig(&myDevice, AD2_CONFIG_CH0);
+    // Turn on all channels
+    //AD2_DEFAULT_CONFIG
+
+    uint64_t start_time = time_elapsed();	//get start time
+    for(i =0; i < size; i++) {
+
+	AD2_ReadConv(&myDevice, &conv[i]);
+    timestamp[i]= time_elapsed(); //get current time
+
+	// Keep 12-bit result, masking or bit select
+	conv[i] &= 0xFFF; //DDR address 0x140de4, 6.5 seconds to read 10000 samples
+	//u16 conv DDR address 0x110094
+
+	//Scale captured data such that 0x000:0xFFF => 0.0:3.3
+	//voltage = (double) (conv & AD2_DATA_MASK) * 3.3 / (AD2_DATA_MASK + 1);
+
+	// Pull channel read information out of conv
+	//channel = (conv & AD2_CHANNEL_MASK) >> AD2_CHANNEL_BIT;
+	//printf("conv = %f V \r\n", (double) conv);
+	//printf("Pin V%d = %.02f V \r\n", channel + 1, voltage);
+	}
+    uint64_t final_time = time_elapsed();	//get start time
+
+    for(int i = 0; i < size; i++){
+    	printf("%d \n", conv[i]);
+    }
+    //usleep(30000000); //30000000us= 30000ms = 30s
+   usleep(10000000);
+
+//   for(int i = 0;i < size; i++){
+//             	printf("%llu \n", timestamp[i]);
+//             }
+//   usleep(10000000);
+//   for(int i = 0;i < size; i++){
+//         	printf("%lf \n", (double) (timestamp[i]-timestamp[0])/333000000); //returns double in seconds
+//          	//printf("%llu \n", timestamp[i]);
+//          }
+
+//    for(int i = 0; i < size; i++){
+//    	printf("%d \n", conv[i]);
+//    }
+    //usleep(30000000); //30000000us= 30000ms = 30s
+   //usleep(10000000);
+
+//   for(int i = 0;i < size; i++){
+//      	printf("%lf \n", (double) (timestamp[i]-timestamp[0])/333000000); //returns double in seconds
+//       	//printf("%llu \n", timestamp[i]);
+//       }
+   //usleep(10000000);
+//   for(int i = 0;i < size; i++){
+//          	printf("%llu \n", timestamp[i]);
+//          }
+
+
+    //uint64_t tmp[size] = {'\0'};
+    //calculate moving average of ECG signal (ADC values)
+    for(i = 0; i < size; i++) { // i = 0 to 1
+    		sum += conv[i];
+    		insert(conv[i], cnt);
+    		//power[i] = 7*i;
+    		//sum += power[i];
+    		//insert(conv[i], cnt);
+    		cnt++;
+
+    		if(cnt >= window_size) {//window size of 700 and collecting 20,000 samples (5.98*2 = 12 seconds)
+    			mov_avg = (sum - array[window_size-1])/(window_size-1);
+    			mov_avg_array[i] = mov_avg;
+    			sum_avg += sum_avg + mov_avg;
+    			//printf("Moving Average = %d \r\n", mov_avg);
+            	//printf("Moving Average = %d \r\n", mov_avg); //%llu long long unsigned needed for uint64_t
+    			sum -= array[0];
+    			erase(1);
+
+    			if(conv[i] > (mov_avg*1.75) && conv[i-1] < (mov_avg*1.75)){ //detecting rising edges
+    				//if(conv[i] > 0  && conv[i-1] > 0) { //checking that samples are not negative
+    				//if(conv[i] - mov_avg > (mov_avg - mov_avg) && conv[i-1] - mov_avg < (mov_avg - mov_avg)){
+    				tmp[i] = (double) (timestamp[i]-timestamp[0])/333000000; //returns time measurement in seconds
+    				//tmp[i] = (timestamp[i]-timestamp[0])/global_timer_clk;//need time measurement of rising edge
+    				dummy[x] = tmp[i];
+    				printf("current time[%d]= %.6lf \n", i, dummy[x]);
+    				x++;
+    				//}
+    			}
+    		}
+        }
+    //average of moving average
+    //sum_avg = sum_avg / window_size;
+    x = 0;
+
+    //filter really close rising edges
+    for(i =0; i < size; i++) {
+    if((dummy[i+1] - dummy[i]) < .4 ) {
+    	dummy[i+1] = 0;
+    }
+    }
+
+    double sum_time = 0;
+	double avg_BPM = 0;
+	double avg_BPM2 = 0;
+	double BPM = 0;
+	int y = 0;
+	for(i = 1; i < size; i++) {
+	t_diff[i-1] = dummy[i] -dummy[i-1];
+	BPM = 60/t_diff[i-1]; //BPM calculation
+	if(BPM < 120 && BPM > 50) { //neglect bad BPM's
+	printf("BPM = %lf \n",BPM);
+	sum_time += t_diff[i-1];
+	avg_BPM += BPM;
+	y++;
+	}
+	}
+
+	sum_time = sum_time/y;
+	//sum_time = sum_time/12;
+    printf("sum_time = %lf \n",sum_time);
+    avg_BPM = avg_BPM/y;
+    printf("avg_BPM = %lf \n",avg_BPM);
+    avg_BPM2 = 60/sum_time;
+    printf("avg_BPM2 = %lf \n",avg_BPM2);
+
+    cleanup_platform();
+    return 0;
+}
+
+void insert (uint32_t val, uint32_t cond) {
+	  uint16_t empty = {'\0'};
+	  //when array is completely empty
+	  if(cond<window_size){//only search for empty elements when window size is being filled
+	  for(int i = 0; i < window_size; i++){
+		  if(array[i] == empty) {
+			  array[i] = val;//store adc value
+			  return;
+		  }
+	  }
+	  }
+	  else{
+		  array[window_size-1] = val;//if window is filled (window size - 1), store adc value at most recent sample
+	  }
+	  return;
+}
+
+void erase(){
+	  for(int i = 0; i < window_size; i++){
+		  if(i < window_size) {
+			  array[i] = array[i+1]; //shift contents by 1
+		  }
+	  }
+	  array[window_size-1] = 0; //empty most recent sample
+	  return;
+ }
+
+uint64_t time_elapsed() {
+
+	/* local variable declaration */
+	//1. Read the upper 32-bit timer counter register.
+	uint32_t upper_bits = Xil_In32(global_time_base + 4);
+
+	//2. Read the lower 32-bit timer counter register.
+	uint32_t lower_bits = Xil_In32(global_time_base);
+
+	//3. Read the upper 32-bit timer counter register again. If the value is different to the 32-bit upper value
+	uint32_t tmp_bits = Xil_In32(global_time_base + 4);
+
+	if(tmp_bits == upper_bits) { //global timer value is valid
+		uint64_t i = (uint64_t) upper_bits << 32 | lower_bits; //returns 64 bit result
+		//printf("%" PRIu64 "\n", i);
+		return i;
+	}
+	//read previously, go to the previous step. Otherwise the 64-bit timer counter value is correct.
+}

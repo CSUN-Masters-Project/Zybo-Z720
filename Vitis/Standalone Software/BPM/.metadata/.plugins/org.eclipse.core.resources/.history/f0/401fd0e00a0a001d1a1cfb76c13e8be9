@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="ECE520_application_project_BPM" location="C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/ECE520_application_project_BPM" platform="C:/Users/luisr/Desktop/Vitis/Graduate_Project/FPGA/BPM/BPM_wrapper/export/BPM_wrapper/BPM_wrapper.xpfm" platformUID="xilinx:zybo-z7-20::0.0(custom)" systemProject="ECE520_application_project_BPM_system" sysConfig="BPM_wrapper" runtime="cpp" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="d1d1c37ff50199327ac83fc912ca86f8">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1081331220">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.323161234" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

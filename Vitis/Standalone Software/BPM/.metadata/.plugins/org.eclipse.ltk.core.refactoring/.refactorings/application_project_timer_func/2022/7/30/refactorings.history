@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;application_project_timer_func/src/helloworld.c&apos; to &apos;timer_function.c&apos;" description="Rename resource &apos;helloworld.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/helloworld.c" name="timer_function.c" stamp="1658524319011" updateReferences="true"/>
+</session>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="ECE520_application_project_BPM_system-bitFile" value="${project_loc:ECE520_application_project_BPM}/_ide/bitstream/BPM_wrapper.bit"/>
+	<item key="ECE520_application_project_BPM_system-bmmFile" value="${project_loc:ECE520_application_project_BPM}/_ide/bitstream/BPM_wrapper.mmi"/>
+	<item key="ECE520_application_project_BPM_system-target" value="Local"/>
+	<item key="ECE520_application_project_BPM_system-device" value="Auto Detect"/>
+	<item key="ECE520_application_project_BPM_system-partial_bit" value="false"/>
+	<item key="ECE520_application_project_BPM_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="application_project_BPM_DDR_system"/>
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zybo Z7 210351B481C2A&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zybo Z7-210351B481C2A-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zybo Z7-210351B481C2A-23727093-0&quot;}}]}"/>
+	<item key="application_project_bram_system-bitFile" value="${project_loc:application_project_bram}/_ide/bitstream/BPM_wrapper.bit"/>
+	<item key="application_project_bram_system-bmmFile" value="${project_loc:application_project_bram}/_ide/bitstream/BPM_wrapper.mmi"/>
+	<item key="application_project_bram_system-target" value="Local"/>
+	<item key="application_project_bram_system-device" value="Auto Detect"/>
+	<item key="application_project_bram_system-partial_bit" value="false"/>
+	<item key="application_project_bram_system-skip_rev_check" value="false"/>
+	<item key="application_project_BPM_DDR_system-bitFile" value="${project_loc:application_project_BPM_DDR}/_ide/bitstream/BPM_DDR_wrapper.bit"/>
+	<item key="application_project_BPM_DDR_system-bmmFile" value=""/>
+	<item key="application_project_BPM_DDR_system-target" value="Local"/>
+	<item key="application_project_BPM_DDR_system-device" value="Auto Detect"/>
+	<item key="application_project_BPM_DDR_system-partial_bit" value="false"/>
+	<item key="application_project_BPM_DDR_system-skip_rev_check" value="false"/>
+</section>
